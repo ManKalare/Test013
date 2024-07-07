@@ -36,7 +36,7 @@ async def restart_handler(_, m):
     await m.reply_text("**Stopped**🚫", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["stubborn"]))
+@bot.on_message(filters.command(["Homelander"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝐓𝐨 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐚 𝐭𝐞𝐱𝐭 𝐟𝐢𝐥𝐞, 𝐬𝐞𝐧𝐝 𝐢𝐭 𝐡𝐞𝐫𝐞.⚡️')
     input: Message = await bot.listen(editable.chat.id)
