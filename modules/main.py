@@ -22,21 +22,21 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 bot = Client("bot",
-             bot_token= "7302901418:AAHjjNs_hlIAJJFqMGNuYMIOd1gdCVFNyVQ",
+             bot_token= "6759014088:AAE8yMeNKRIeuahOcrs7LLWjS_7ijO-LoFs",
              api_id= 25038096,
              api_hash= "098112aae38be62db58363267a061b59")
 
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Hello, **Nikhil Jha**! 🌟\n\n I am your friendly bot 🤖, here to help you download links from your **.txt** file and upload them to Telegram. To get started, simply send me the /Homelander command and follow a few easy steps.")
+    editable = await m.reply_text("Hello, **Adarsh Chaudhary**! 🌟\n\n I am your friendly bot 🤖, here to help you download links from your **.txt** file and upload them to Telegram. To get started, simply send me the /Daddy's command and follow a few easy steps.")
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
     await m.reply_text("**Stopped**🚫", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["Homelander"]))
+@bot.on_message(filters.command(["Daddy's"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝐓𝐨 𝐝𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐚 𝐭𝐞𝐱𝐭 𝐟𝐢𝐥𝐞, 𝐬𝐞𝐧𝐝 𝐢𝐭 𝐡𝐞𝐫𝐞.⚡️')
     input: Message = await bot.listen(editable.chat.id)
